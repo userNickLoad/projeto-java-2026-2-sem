@@ -29,11 +29,9 @@ public class JFrameGame extends javax.swing.JFrame {
         
         setResizable(false);
         
-        setSize(WindowSize.WIDTH, WindowSize.HEIGHT);
-        
         setContentPane(new JPanelBattle());
         
-        pack();
+        setSize(WindowSize.WIDTH, WindowSize.HEIGHT);
         
         setLocationRelativeTo(null);
     }
@@ -54,7 +52,7 @@ public class JFrameGame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1200, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)   
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -18,7 +18,7 @@ public class AntidoteEffect extends Effect{
 
     @Override
     public void apply(Caracter caracter) {
-        for(var effect : this.cures){
+        for(Effect effect : this.cures){
             caracter.removeEffect(effect);
         }
     }

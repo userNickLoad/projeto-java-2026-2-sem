@@ -21,7 +21,7 @@ public class JPanelBattleInfo extends JPanel {
 
         // Borda temporária de 1 pixel.
         setBorder(
-            BorderFactory.createLineBorder(Color.BLACK, 1)
+            BorderFactory.createLineBorder(Color.BLACK, 1, true)
         );
 
         setPreferredSize(new Dimension(0, 100));
