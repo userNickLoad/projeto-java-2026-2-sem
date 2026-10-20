@@ -4,7 +4,8 @@
 
 package br.edu.fei.oinimigo;
 
-import br.edu.fei.view.JFrameGreater;
+import br.edu.fei.view.battle.JFrameGame;
+import br.edu.fei.view.*;
 import java.awt.*;
 import javax.swing.*;
 
@@ -16,9 +17,9 @@ public class OInimigo {
 
 
     public static void main(String[] args) {
-        JFrameGreater greater = new JFrameGreater();
+        JFrameGame game = new JFrameGame();
         
-        greater.setVisible(true);
+        game.setVisible(true);
         
         
     }

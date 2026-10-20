@@ -29,7 +29,7 @@ public class JPanelSaveCard extends JPanel {
         
         this.id = id;
         
-       setLayout(new BorderLayout(10, 10));
+        setLayout(new BorderLayout(10, 10));
         setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createLineBorder(Color.GRAY),
                 BorderFactory.createEmptyBorder(10, 10, 10, 10)
@@ -69,6 +69,17 @@ public class JPanelSaveCard extends JPanel {
             Integer.MAX_VALUE,
             getPreferredSize().height
         ));
+        
+        setBackground(Colors.secundary);
+        setForeground(Colors.primary);
+        header.setBackground(Colors.secundary);
+        header.setForeground(Colors.primary);
+        battleInfo.setBackground(Colors.secundary);
+        battleInfo.setForeground(Colors.primary);
+        
+        
+        
+        
     }
     
     public JPanelSaveCard() {
