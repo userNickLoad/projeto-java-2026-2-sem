@@ -10,4 +10,9 @@ package br.edu.fei.oinimigo.model;
  */
 public class Player {
     
+    private Caracter caracter;
+    private Inventory inventory;
+    
+    
+    
 }

@@ -4,6 +4,10 @@
 
 package br.edu.fei.oinimigo;
 
+import br.edu.fei.view.JFrameGreater;
+import java.awt.*;
+import javax.swing.*;
+
 /**
  *
  * @author nicolas
@@ -12,6 +16,10 @@ public class OInimigo {
 
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        JFrameGreater greater = new JFrameGreater();
+        
+        greater.setVisible(true);
+        
+        
     }
 }

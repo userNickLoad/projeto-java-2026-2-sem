@@ -52,4 +52,5 @@ public class Effects {
     public static Effect getByName(String name){        
         return map.get(name);
     }
+    
 }

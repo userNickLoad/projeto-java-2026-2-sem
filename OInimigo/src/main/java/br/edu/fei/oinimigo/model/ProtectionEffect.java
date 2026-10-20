@@ -32,4 +32,9 @@ public class ProtectionEffect extends Effect{
         return (int) Math.ceil(damage * this.absorption);
     }
     
+    @Override
+    public ActiveEffect createActiveEffect(){
+        return new ProtectionActiveEffect(this);
+    }
+    
 }

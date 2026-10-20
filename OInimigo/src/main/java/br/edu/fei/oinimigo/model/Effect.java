@@ -27,5 +27,7 @@ abstract class Effect {
     }
     
     public abstract void apply(Caracter caracter);
+    
+    public abstract ActiveEffect createActiveEffect();
 
 }

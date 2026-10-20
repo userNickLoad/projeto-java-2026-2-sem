@@ -21,4 +21,9 @@ public class DamageEffect extends Effect{
         caracter.receiveDamage(damage);
     }
     
+    @Override
+    public ActiveEffect createActiveEffect(){
+        return new ActiveEffect(this);
+    }
+    
 }

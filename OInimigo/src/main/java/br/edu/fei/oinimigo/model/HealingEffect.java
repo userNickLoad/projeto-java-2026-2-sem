@@ -22,4 +22,9 @@ public class HealingEffect extends Effect{
         caracter.receiveHealing(this.healing);
     }
     
+    @Override
+    public ActiveEffect createActiveEffect(){
+        return new ActiveEffect(this);
+    }
+    
 }

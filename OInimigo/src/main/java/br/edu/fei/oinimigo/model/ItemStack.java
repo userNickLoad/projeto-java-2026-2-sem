@@ -4,6 +4,8 @@
  */
 package br.edu.fei.oinimigo.model;
 
+import java.util.ArrayList;
+
 /**
  * Essa classe implementa Stacks responsaveis por ter um item e guarda a sua 
  * quantidade
@@ -12,6 +14,7 @@ package br.edu.fei.oinimigo.model;
 class ItemStack {
     private Item item;
     private int amount;
+    private ArrayList<InventorySlot> inventorySlots;
     
     public ItemStack(Item item){
         this.item = item;
@@ -109,4 +112,11 @@ class ItemStack {
         return this.amount;
     }
     
+    public ArrayList<InventorySlot> getInventorySlots(){
+        return this.inventorySlots;
+    }
+    
+    public void setInventorySlots(ArrayList<InventorySlot> slots){
+        this.inventorySlots = slots;
+    }
 }

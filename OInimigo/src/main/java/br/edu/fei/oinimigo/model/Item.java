@@ -47,4 +47,8 @@ public class Item extends GameObject{
     public Effect [] getEffects(){
         return this.effects;
     }
+    
+    public ItemStack createItemStack(int amount){
+        return new ItemStack(this, amount);
+    }
 }

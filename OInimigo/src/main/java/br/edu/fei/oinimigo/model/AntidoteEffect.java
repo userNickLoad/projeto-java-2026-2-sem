@@ -23,4 +23,9 @@ public class AntidoteEffect extends Effect{
         }
     }
     
+    @Override
+    public ActiveEffect createActiveEffect(){
+        return new ActiveEffect(this);
+    }
+    
 }

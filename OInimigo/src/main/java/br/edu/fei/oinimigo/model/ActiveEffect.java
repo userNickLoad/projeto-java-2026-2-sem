@@ -11,15 +11,10 @@ package br.edu.fei.oinimigo.model;
 public class ActiveEffect {
     private final Effect effect;
     private int lastingDuration;
-    private int health = 0;
     
     public ActiveEffect(Effect effect){
         this.effect = effect;
         this.lastingDuration = effect.getRoundDuration();
-        
-        if(effect instanceof ProtectionEffect){
-            this.health = ((ProtectionEffect) effect).getHealth();
-        }
     }
     
     public void decrementRoundDuration(){
@@ -34,34 +29,8 @@ public class ActiveEffect {
         return this.lastingDuration;
     }
     
-    public int getHealth(){
-        return this.health;
-    }
-    
     public void apply(Caracter caracter){
         this.effect.apply(caracter);
-    }
-    
-    protected int absorbDamage(int damage){
-        if(!(effect instanceof ProtectionEffect))
-            return 0;
-        
-        ProtectionEffect pe = (ProtectionEffect) effect;
-        
-        this.receiveDamage(damage);
-        
-        return pe.absorveDamage(damage);
-    }
-    
-    protected boolean isUp(){
-        return health > 0;
-    }
-    
-    protected void receiveDamage(int damage){
-        if(!(effect instanceof ProtectionEffect))
-            return;
-        
-        this.health = (this.health > damage)? this.health - damage: 0;
     }
     
 }
