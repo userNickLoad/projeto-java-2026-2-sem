@@ -4,6 +4,7 @@ br\edu\fei\view\JFrameLogin.class
 br\edu\fei\view\WindowSize.class
 br\edu\fei\oinimigo\OInimigo.class
 br\edu\fei\model\ProtectionActiveEffect.class
+br\edu\fei\view\battle\LifeCard.class
 br\edu\fei\view\Colors.class
 br\edu\fei\view\JFrameSaves.class
 br\edu\fei\view\JPanelSaveCard.class

@@ -7,18 +7,13 @@ package br.edu.fei.view.battle;
 
 import javax.swing.*;
 import java.awt.*;
+import javax.swing.border.EmptyBorder;
 
 /**
  *
  * @author unifnavila
  */
 public class LifeCard extends JPanel{
-    public static int width;
-    public static int height;
-    
-    private int x;
-    private int y;
-    
     private JLabel lblName;
     private JLabel lblVida;
     private JProgressBar progressLife;
@@ -27,24 +22,43 @@ public class LifeCard extends JPanel{
     private int totalHealth;
     private int health;
     
-    public LifeCard(String name, int totalHealth, int health, int x, int y){
-        lblName = new JLabel();
-        lblVida = new JLabel();
+    public LifeCard(String name, int totalHealth, int health){
+        this.name = name;
+        this.totalHealth = totalHealth;
+        this.health = health;   
+        
         progressLife = new JProgressBar(0, totalHealth);
+        setHealth(health);
+        progressLife.setBackground(Color.DARK_GRAY); // Fundo da barra
+        progressLife.setStringPainted(true);         // Exibe o valor em texto
+        
+        setLayout(new GridLayout(2, 1, 5, 5));
+        setBorder(new EmptyBorder(10, 10, 10, 10));
+        
+        lblName = new JLabel(name);
+        lblName.setFont(new Font(Font.DIALOG, Font.PLAIN, 24));
         
         add(lblName);
+        add(progressLife);
         
         
-    }
-    
-    public void setDimentions(int width, int height){
-        this.width = width;
-        this.height = height;
         
     }
     
-    public void sethealth(int health){
+    public void setHealth(int health){
         this.health = health;
+        Color c;
+        
+        if(health > this.totalHealth * .75){
+            c = Color.GREEN;
+        }else if(health > this.totalHealth * .25){
+            c = Color.YELLOW.darker();
+        }else{
+            c = Color.red;
+        }
+        
+        progressLife.setValue(health);  
+        progressLife.setForeground(c);  
     }
     
 }

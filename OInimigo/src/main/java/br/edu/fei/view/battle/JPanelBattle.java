@@ -16,19 +16,21 @@ public class JPanelBattle extends JLayeredPane {
     private final JPanelBattleScene scene;
     private final JPanelBattleInfo infoPanel;
     private final JPanelBattleInfo actionsPanel;
-    private final JPanelBattleInfo enemy;
-    private final JPanelBattleInfo hero;
+    private final LifeCard enemy;
+    private final LifeCard hero;
 
     public JPanelBattle() {
         scene = new JPanelBattleScene();
         infoPanel = new JPanelBattleInfo();
         actionsPanel = new JPanelBattleInfo();
-        enemy = new JPanelBattleInfo();
-        hero = new JPanelBattleInfo();
+        enemy = new LifeCard("inimigo", 100, 25);
+        hero = new LifeCard("eu", 200, 100);
         
         add(scene, JLayeredPane.DEFAULT_LAYER);
         add(infoPanel, JLayeredPane.PALETTE_LAYER);
         add(actionsPanel, JLayeredPane.PALETTE_LAYER);
+        add(enemy, JLayeredPane.PALETTE_LAYER);
+        add(hero, JLayeredPane.PALETTE_LAYER);
 
         setPreferredSize(
             new Dimension(
@@ -76,10 +78,18 @@ public class JPanelBattle extends JLayeredPane {
                 actionsHeight
         );
         
-//        int lifeCard = 
-//        
-//        int x_hero = 6*height/10;
-//        int y_hero = 4*width/10;
+        int lifeCardWidth = 200;
+        int lifeCardHeight = 80;
+
+        int x_hero = 3*width/10;
+        int y_hero = 6*height/10;
+     
+        hero.setBounds(x_hero, y_hero, lifeCardWidth, lifeCardHeight);
+        
+        int x_enemy = 6*width/10;
+        int y_enemy = 3*height/10;
+        
+        enemy.setBounds(x_enemy, y_enemy, lifeCardWidth, lifeCardHeight);
         
     }
 }
