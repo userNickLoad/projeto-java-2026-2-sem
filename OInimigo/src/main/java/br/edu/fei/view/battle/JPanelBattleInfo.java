@@ -28,17 +28,4 @@ public class JPanelBattleInfo extends JPanel {
         setPreferredSize(new Dimension(0, 100));
     }
     
-    public JPanelBattleInfo(LayoutManager lm) {
-        super(lm);
-        
-        setOpaque(true);
-        setBackground(new Color(245, 245, 245, 230));
-
-        // Borda temporária de 1 pixel.
-        setBorder(
-            BorderFactory.createLineBorder(Color.BLACK, 1, true)
-        );
-
-        setPreferredSize(new Dimension(0, 100));
-    }
 }
