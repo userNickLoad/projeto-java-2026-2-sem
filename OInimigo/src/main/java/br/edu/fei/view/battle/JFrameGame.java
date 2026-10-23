@@ -29,7 +29,27 @@ public class JFrameGame extends javax.swing.JFrame {
         
         setResizable(false);
         
-        setContentPane(new JPanelBattle());
+        JPanelBattle b = new JPanelBattle();
+        
+        b.addEffect("fraqueza", "-30AT", "3/2");
+        b.addEffect("fraqueza", "-30AT", "3/2");
+        b.addEffect("fraqueza", "-30AT", "3/2");
+        b.addEffect("fraqueza", "-30AT", "3/2");
+        b.addEffect("fraqueza", "-30AT", "3/2");
+        b.addEffect("fraqueza", "-30AT", "3/2");
+        
+        b.addAttack("ataque", "-30hp", "fogo no cu");
+        b.addAttack("ataque", "-30hp", "fogo no cu");
+        b.addAttack("ataque", "-30hp", "fogo no cu");
+        b.addAttack("ataque", "-30hp", "fogo no cu");
+        b.addAttack("ataque", "-30hp", "fogo no cu");
+        b.addAttack("ataque", "-30hp", "fogo no cu");
+        b.addAttack("ataque", "-30hp", "fogo no cu");
+        b.addAttack("ataque", "-30hp", "fogo no cu");
+        b.addAttack("ataque", "-30hp", "fogo no cu");
+        
+
+        setContentPane(b);
         
         setSize(WindowSize.WIDTH, WindowSize.HEIGHT);
         

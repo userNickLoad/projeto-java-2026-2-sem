@@ -5,6 +5,8 @@ br\edu\fei\view\WindowSize.class
 br\edu\fei\oinimigo\OInimigo.class
 br\edu\fei\model\ProtectionActiveEffect.class
 br\edu\fei\view\battle\LifeCard.class
+br\edu\fei\view\battle\InventoryPanel.class
+br\edu\fei\view\battle\AttackCard.class
 br\edu\fei\view\Colors.class
 br\edu\fei\view\JFrameSaves.class
 br\edu\fei\view\JPanelSaveCard.class
@@ -13,6 +15,7 @@ br\edu\fei\view\battle\JPanelBattleScene.class
 br\edu\fei\model\Inventory.class
 br\edu\fei\model\InventorySlot.class
 br\edu\fei\model\ItemStack.class
+br\edu\fei\view\battle\EffectCard.class
 br\edu\fei\view\battle\BattleCanvas.class
 br\edu\fei\view\battle\JFrameGame.class
 br\edu\fei\model\Effect.class
@@ -24,6 +27,7 @@ br\edu\fei\model\Item.class
 br\edu\fei\model\Player.class
 br\edu\fei\model\ProtectionEffect.class
 br\edu\fei\model\GameObject.class
+br\edu\fei\view\battle\BtnAction.class
 br\edu\fei\model\Caracter.class
 br\edu\fei\model\DamageEffect.class
 br\edu\fei\view\battle\JPanelBattle.class
