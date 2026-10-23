@@ -14,7 +14,8 @@ import java.awt.*;
  */
 public class BtnAction extends JButton{
     
-    public BtnAction(){
+    public BtnAction(String name){
+        super(name);
         
     }
     
