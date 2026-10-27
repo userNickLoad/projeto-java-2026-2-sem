@@ -2,8 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.edu.fei.model;
+package br.edu.fei.model.item;
 
+import br.edu.fei.model.caracter.ActiveCaracter;
+import br.edu.fei.model.caracter.InventorySlot;
+import br.edu.fei.model.caracter.Caracter;
+import br.edu.fei.model.caracter.Caracter;
 import java.util.ArrayList;
 
 /**
@@ -11,7 +15,7 @@ import java.util.ArrayList;
  * quantidade
  * @author user
  */
-class ItemStack {
+public class ItemStack {
     private Item item;
     private int amount;
     private ArrayList<InventorySlot> inventorySlots;
@@ -33,7 +37,7 @@ class ItemStack {
      * @param caracter do tipo Caracter, personagem que terá o efeito aplicado
      * @return boolean true caso a stack se torne invalida
      */
-    public boolean useItem(Caracter caracter){
+    public boolean useItem(ActiveCaracter caracter){
         this.item.useItem(caracter);
         
         this.amount--;

@@ -2,7 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.edu.fei.model;
+package br.edu.fei.model.effect;
+
+import br.edu.fei.model.caracter.ActiveCaracter;
+import br.edu.fei.model.caracter.Caracter;
 
 /**
  *
@@ -17,7 +20,7 @@ public class AntidoteEffect extends Effect{
     }
 
     @Override
-    public void apply(Caracter caracter) {
+    public void apply(ActiveCaracter caracter) {
         for(Effect effect : this.cures){
             caracter.removeEffect(effect);
         }

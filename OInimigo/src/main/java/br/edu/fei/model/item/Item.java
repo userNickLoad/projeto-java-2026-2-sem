@@ -2,7 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.edu.fei.model;
+package br.edu.fei.model.item;
+
+import br.edu.fei.model.GameObject;
+import br.edu.fei.model.caracter.ActiveCaracter;
+import br.edu.fei.model.caracter.Caracter;
+import br.edu.fei.model.caracter.Caracter;
+import br.edu.fei.model.item.ItemStack;
+import br.edu.fei.model.effect.Effect;
+import br.edu.fei.model.effect.Effect;
 
 /**
  *
@@ -26,7 +34,7 @@ public class Item extends GameObject{
         this.effects = effects;
     }
     
-    public void useItem(Caracter caracter){
+    public void useItem(ActiveCaracter caracter){
         for(Effect effect: this.effects){
             caracter.addEffect(effect);
         }

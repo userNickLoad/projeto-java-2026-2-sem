@@ -11,7 +11,7 @@ package br.edu.fei.model;
  *
  * @author nicolas
  */
-abstract class GameObject {
+public abstract class GameObject {
     private String name;
     private String image;
     

@@ -1,4 +1,6 @@
-package br.edu.fei.model;
+package br.edu.fei.model.effect;
+
+import br.edu.fei.model.caracter.ActiveCaracter;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -9,7 +11,7 @@ package br.edu.fei.model;
  *
  * @author nicolas
  */
-abstract class Effect {
+public abstract class Effect {
     private final String name;
     private final int roundDuration;
     
@@ -26,7 +28,7 @@ abstract class Effect {
         return this.roundDuration;
     }
     
-    public abstract void apply(Caracter caracter);
+    public abstract void apply(ActiveCaracter caracter);
     
     public abstract ActiveEffect createActiveEffect();
 
